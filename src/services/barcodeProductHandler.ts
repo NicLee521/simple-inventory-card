@@ -99,6 +99,19 @@ export class BarcodeProductHandler {
     if (product.unit) {
       this.autoFillIfEmpty(`${prefix}-unit`, product.unit);
     }
+
+    const nutritionFields: Record<string, string[]> = {
+      'serving-size': ['serving_size'],
+      'servings-per-unit': ['servings_per_unit'],
+      'calories-per-serving': ['calories_per_serving'],
+      'protein-per-serving': ['protein_g_per_serving'],
+      'carbohydrates-per-serving': ['carbs_g_per_serving'],
+      'fat-per-serving': ['fat_g_per_serving'],
+    };
+    for (const [field, keys] of Object.entries(nutritionFields)) {
+      const value = keys.map((key) => product[key]).find((candidate) => candidate !== undefined && candidate !== '');
+      this.autoFillIfEmpty(`${prefix}-${field}`, value);
+    }
     this.hideProductPicker(prefix);
   }
 

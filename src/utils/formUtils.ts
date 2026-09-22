@@ -139,6 +139,12 @@ export const FormUtils = {
       price: Math.max(0, FormUtils.parseNumber(formData.price, DEFAULTS.PRICE)),
       todoQuantityPlacement:
         formData.todoQuantityPlacement?.trim() || DEFAULTS.TODO_QUANTITY_PLACEMENT,
+      servingSize: formData.servingSize?.trim() || DEFAULTS.SERVING_SIZE,
+      servingsPerUnit: Math.max(0, FormUtils.parseNumber(formData.servingsPerUnit, DEFAULTS.SERVINGS_PER_UNIT)),
+      caloriesPerServing: Math.max(0, FormUtils.parseNumber(formData.caloriesPerServing, DEFAULTS.CALORIES_PER_SERVING)),
+      proteinPerServing: Math.max(0, FormUtils.parseNumber(formData.proteinPerServing, DEFAULTS.PROTEIN_PER_SERVING)),
+      carbohydratesPerServing: Math.max(0, FormUtils.parseNumber(formData.carbohydratesPerServing, DEFAULTS.CARBOHYDRATES_PER_SERVING)),
+      fatPerServing: Math.max(0, FormUtils.parseNumber(formData.fatPerServing, DEFAULTS.FAT_PER_SERVING)),
     };
   },
 
@@ -176,6 +182,12 @@ export const FormUtils = {
       price: Math.max(0, FormUtils.parseNumber(itemData.price, DEFAULTS.PRICE)),
       unit: FormUtils.sanitizeString(itemData.unit, 20),
       location: FormUtils.sanitizeString(itemData.location, 50),
+      servingSize: FormUtils.sanitizeString(itemData.servingSize, 50),
+      servingsPerUnit: Math.max(0, FormUtils.parseNumber(itemData.servingsPerUnit, DEFAULTS.SERVINGS_PER_UNIT)),
+      caloriesPerServing: Math.max(0, FormUtils.parseNumber(itemData.caloriesPerServing, DEFAULTS.CALORIES_PER_SERVING)),
+      proteinPerServing: Math.max(0, FormUtils.parseNumber(itemData.proteinPerServing, DEFAULTS.PROTEIN_PER_SERVING)),
+      carbohydratesPerServing: Math.max(0, FormUtils.parseNumber(itemData.carbohydratesPerServing, DEFAULTS.CARBOHYDRATES_PER_SERVING)),
+      fatPerServing: Math.max(0, FormUtils.parseNumber(itemData.fatPerServing, DEFAULTS.FAT_PER_SERVING)),
     };
   },
 };

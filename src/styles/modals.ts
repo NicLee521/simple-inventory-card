@@ -53,6 +53,48 @@ export const modalStyles: CSSResult = css`
     color: var(--primary-text-color);
   }
 
+  .nutrition-section {
+    margin: 20px 0 4px;
+    border-top: 1px solid var(--divider-color);
+    border-bottom: 1px solid var(--divider-color);
+    padding: 12px 0;
+  }
+
+  .nutrition-section summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary-text-color);
+  }
+
+  .nutrition-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+    margin-top: 16px;
+  }
+
+  .nutrition-field label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+  }
+
+  .nutrition-input {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .nutrition-input input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .nutrition-input span {
+    color: var(--secondary-text-color);
+    font-size: 0.85em;
+  }
+
   .modal-buttons {
     display: flex;
     gap: 16px;

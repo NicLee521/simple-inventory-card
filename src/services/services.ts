@@ -66,6 +66,12 @@ export class Services {
         [PARAMS.TODO_QUANTITY_PLACEMENT]: sanitizedItemData.todoQuantityPlacement,
         [PARAMS.PRICE]: sanitizedItemData.price,
         [PARAMS.UNIT]: sanitizedItemData.unit,
+        [PARAMS.SERVING_SIZE]: sanitizedItemData.servingSize,
+        [PARAMS.SERVINGS_PER_UNIT]: sanitizedItemData.servingsPerUnit,
+        [PARAMS.CALORIES_PER_SERVING]: sanitizedItemData.caloriesPerServing,
+        [PARAMS.PROTEIN_PER_SERVING]: sanitizedItemData.proteinPerServing,
+        [PARAMS.CARBOHYDRATES_PER_SERVING]: sanitizedItemData.carbohydratesPerServing,
+        [PARAMS.FAT_PER_SERVING]: sanitizedItemData.fatPerServing,
       };
 
       if (sanitizedItemData.barcode) {
@@ -199,6 +205,12 @@ export class Services {
         [PARAMS.TODO_QUANTITY_PLACEMENT]: sanitizedItemData.todoQuantityPlacement,
         [PARAMS.PRICE]: sanitizedItemData.price,
         [PARAMS.UNIT]: sanitizedItemData.unit,
+        [PARAMS.SERVING_SIZE]: sanitizedItemData.servingSize,
+        [PARAMS.SERVINGS_PER_UNIT]: sanitizedItemData.servingsPerUnit,
+        [PARAMS.CALORIES_PER_SERVING]: sanitizedItemData.caloriesPerServing,
+        [PARAMS.PROTEIN_PER_SERVING]: sanitizedItemData.proteinPerServing,
+        [PARAMS.CARBOHYDRATES_PER_SERVING]: sanitizedItemData.carbohydratesPerServing,
+        [PARAMS.FAT_PER_SERVING]: sanitizedItemData.fatPerServing,
       };
 
       parameters[PARAMS.BARCODE] = sanitizedItemData.barcode;

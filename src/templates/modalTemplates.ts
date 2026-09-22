@@ -19,6 +19,7 @@ import { itemDescription } from './modalPartials/itemDescription';
 import { autoAddIdCheckbox } from './modalPartials/autoAddIdCheckbox';
 import { itemPrice } from './modalPartials/itemPrice';
 import { productPicker } from './modalPartials/productPicker';
+import { nutrition } from './modalPartials/nutrition';
 
 export function createUnifiedModal(
   todoLists: TodoList[],
@@ -55,6 +56,8 @@ export function createUnifiedModal(
           <div class="form-row">
             ${itemPrice(prefix, translations)}
           </div>
+
+          ${nutrition(prefix)}
 
           <div class="form-row">
             ${itemCategory(prefix, translations, categories)}

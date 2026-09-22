@@ -16,6 +16,12 @@ export interface SanitizedItemData {
   todoList: string;
   todoQuantityPlacement: string;
   unit: string;
+  servingSize?: string;
+  servingsPerUnit?: number;
+  caloriesPerServing?: number;
+  proteinPerServing?: number;
+  carbohydratesPerServing?: number;
+  fatPerServing?: number;
 }
 
 export interface ItemData {
@@ -37,6 +43,12 @@ export interface ItemData {
   todoList?: string;
   todoQuantityPlacement?: string;
   unit?: string;
+  servingSize?: string;
+  servingsPerUnit?: number;
+  caloriesPerServing?: number;
+  proteinPerServing?: number;
+  carbohydratesPerServing?: number;
+  fatPerServing?: number;
 }
 
 export interface RawFormData {
@@ -57,4 +69,10 @@ export interface RawFormData {
   todoList: string;
   todoQuantityPlacement: string;
   unit: string;
+  servingSize?: string;
+  servingsPerUnit?: string;
+  caloriesPerServing?: string;
+  proteinPerServing?: string;
+  carbohydratesPerServing?: string;
+  fatPerServing?: string;
 }

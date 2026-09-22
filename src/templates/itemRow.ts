@@ -105,6 +105,12 @@ export function createItemRowTemplate(
   const safeName = Utilities.sanitizeHtml(item.name);
   const safeDescription = Utilities.sanitizeHtml(item.description || '');
   const safeUnit = Utilities.sanitizeHtml(item.unit || '');
+  const caloriesPerUnit = (item.servings_per_unit ?? 0) * (item.calories_per_serving ?? 0);
+  const proteinPerUnit = (item.servings_per_unit ?? 0) * (item.protein_g_per_serving ?? 0);
+  const nutritionUnit = safeUnit && safeUnit !== 'unit' ? safeUnit.replace(/s$/, '') : 'unit';
+  const nutritionSummary = caloriesPerUnit > 0 || proteinPerUnit > 0
+    ? `<div class="nutrition-summary">${caloriesPerUnit > 0 ? `${caloriesPerUnit % 1 === 0 ? caloriesPerUnit : caloriesPerUnit.toFixed(1)} kcal/${nutritionUnit}` : ''}${caloriesPerUnit > 0 && proteinPerUnit > 0 ? ' • ' : ''}${proteinPerUnit > 0 ? `${proteinPerUnit % 1 === 0 ? proteinPerUnit : proteinPerUnit.toFixed(1)}g protein/${nutritionUnit}` : ''}</div>`
+    : '';
 
   return `
     <div class="item-row ${item.quantity === 0 ? 'zero-quantity' : ''} ${item.auto_add_enabled ? 'auto-add-enabled' : ''}">
@@ -119,6 +125,7 @@ export function createItemRowTemplate(
       </div>`
           : ''
       }
+      ${nutritionSummary}
       <div class="item-footer">
         <div class="item-footer-row">
           <div class="item-details">

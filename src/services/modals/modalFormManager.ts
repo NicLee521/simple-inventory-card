@@ -35,6 +35,12 @@ export class ModalFormManager {
       todoQuantityPlacement: this.getInputValue(`add-${ELEMENTS.TODO_QUANTITY_PLACEMENT}`),
       price: this.getInputValue(`add-${ELEMENTS.PRICE}`),
       unit: this.getInputValue(`add-${ELEMENTS.UNIT}`),
+      servingSize: this.getInputValue(`add-${ELEMENTS.SERVING_SIZE}`),
+      servingsPerUnit: this.getInputValue(`add-${ELEMENTS.SERVINGS_PER_UNIT}`),
+      caloriesPerServing: this.getInputValue(`add-${ELEMENTS.CALORIES_PER_SERVING}`),
+      proteinPerServing: this.getInputValue(`add-${ELEMENTS.PROTEIN_PER_SERVING}`),
+      carbohydratesPerServing: this.getInputValue(`add-${ELEMENTS.CARBOHYDRATES_PER_SERVING}`),
+      fatPerServing: this.getInputValue(`add-${ELEMENTS.FAT_PER_SERVING}`),
     };
   }
 
@@ -62,6 +68,12 @@ export class ModalFormManager {
       todoQuantityPlacement: this.getInputValue(`edit-${ELEMENTS.TODO_QUANTITY_PLACEMENT}`),
       price: this.getInputValue(`edit-${ELEMENTS.PRICE}`),
       unit: this.getInputValue(`edit-${ELEMENTS.UNIT}`),
+      servingSize: this.getInputValue(`edit-${ELEMENTS.SERVING_SIZE}`),
+      servingsPerUnit: this.getInputValue(`edit-${ELEMENTS.SERVINGS_PER_UNIT}`),
+      caloriesPerServing: this.getInputValue(`edit-${ELEMENTS.CALORIES_PER_SERVING}`),
+      proteinPerServing: this.getInputValue(`edit-${ELEMENTS.PROTEIN_PER_SERVING}`),
+      carbohydratesPerServing: this.getInputValue(`edit-${ELEMENTS.CARBOHYDRATES_PER_SERVING}`),
+      fatPerServing: this.getInputValue(`edit-${ELEMENTS.FAT_PER_SERVING}`),
     };
   }
 
@@ -121,6 +133,12 @@ export class ModalFormManager {
           (item.price ?? DEFAULTS.PRICE) === 0 ? '' : (item.price ?? DEFAULTS.PRICE).toString(),
       },
       { id: `edit-${ELEMENTS.UNIT}`, value: item.unit ?? DEFAULTS.UNIT },
+      { id: `edit-${ELEMENTS.SERVING_SIZE}`, value: (item.serving_size ?? DEFAULTS.SERVING_SIZE).toString() },
+      { id: `edit-${ELEMENTS.SERVINGS_PER_UNIT}`, value: (item.servings_per_unit ?? DEFAULTS.SERVINGS_PER_UNIT).toString() },
+      { id: `edit-${ELEMENTS.CALORIES_PER_SERVING}`, value: (item.calories_per_serving ?? DEFAULTS.CALORIES_PER_SERVING).toString() },
+      { id: `edit-${ELEMENTS.PROTEIN_PER_SERVING}`, value: (item.protein_g_per_serving ?? DEFAULTS.PROTEIN_PER_SERVING).toString() },
+      { id: `edit-${ELEMENTS.CARBOHYDRATES_PER_SERVING}`, value: (item.carbs_g_per_serving ?? DEFAULTS.CARBOHYDRATES_PER_SERVING).toString() },
+      { id: `edit-${ELEMENTS.FAT_PER_SERVING}`, value: (item.fat_per_serving ?? DEFAULTS.FAT_PER_SERVING).toString() },
     ];
 
     this.setFormValues(fields);
@@ -169,6 +187,12 @@ export class ModalFormManager {
       },
       { id: `add-${ELEMENTS.PRICE}`, value: '' },
       { id: `add-${ELEMENTS.UNIT}`, value: DEFAULTS.UNIT },
+      { id: `add-${ELEMENTS.SERVING_SIZE}`, value: '' },
+      { id: `add-${ELEMENTS.SERVINGS_PER_UNIT}`, value: '' },
+      { id: `add-${ELEMENTS.CALORIES_PER_SERVING}`, value: '' },
+      { id: `add-${ELEMENTS.PROTEIN_PER_SERVING}`, value: '' },
+      { id: `add-${ELEMENTS.CARBOHYDRATES_PER_SERVING}`, value: '' },
+      { id: `add-${ELEMENTS.FAT_PER_SERVING}`, value: '' },
     ];
 
     this.setFormValues(fields);

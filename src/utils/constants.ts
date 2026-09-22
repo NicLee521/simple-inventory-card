@@ -51,6 +51,12 @@ export const PARAMS = {
   TODO_LIST: 'todo_list',
   TODO_QUANTITY_PLACEMENT: 'todo_quantity_placement',
   UNIT: 'unit',
+  SERVING_SIZE: 'serving_size',
+  SERVINGS_PER_UNIT: 'servings_per_unit',
+  CALORIES_PER_SERVING: 'calories_per_serving',
+  PROTEIN_PER_SERVING: 'protein_g_per_serving',
+  CARBOHYDRATES_PER_SERVING: 'carbs_g_per_serving',
+  FAT_PER_SERVING: 'fat_per_serving',
 };
 
 export const ELEMENTS = {
@@ -74,6 +80,12 @@ export const ELEMENTS = {
   TODO_LIST: 'todo-list',
   TODO_QUANTITY_PLACEMENT: 'todo-quantity-placement',
   UNIT: 'unit',
+  SERVING_SIZE: 'serving-size',
+  SERVINGS_PER_UNIT: 'servings-per-unit',
+  CALORIES_PER_SERVING: 'calories-per-serving',
+  PROTEIN_PER_SERVING: 'protein-per-serving',
+  CARBOHYDRATES_PER_SERVING: 'carbohydrates-per-serving',
+  FAT_PER_SERVING: 'fat-per-serving',
 
   ADD_ITEM_BTN: 'add-item-btn',
   EXPORT_INVENTORY: 'export-inventory',
@@ -167,6 +179,12 @@ export const DEFAULTS = {
   TODO_LIST: '',
   TODO_QUANTITY_PLACEMENT: 'name',
   UNIT: '',
+  SERVING_SIZE: '',
+  SERVINGS_PER_UNIT: 0,
+  CALORIES_PER_SERVING: 0,
+  PROTEIN_PER_SERVING: 0,
+  CARBOHYDRATES_PER_SERVING: 0,
+  FAT_PER_SERVING: 0,
 };
 
 export const SORT_METHODS = {

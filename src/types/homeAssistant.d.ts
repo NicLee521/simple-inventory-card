@@ -163,6 +163,12 @@ export interface InventoryItem {
   todo_list: string;
   todo_quantity_placement?: string;
   unit: string;
+  serving_size?: string;
+  servings_per_unit?: number;
+  calories_per_serving?: number;
+  protein_g_per_serving?: number;
+  carbs_g_per_serving?: number;
+  fat_per_serving?: number;
 }
 
 export interface InventoryConfig extends LovelaceCardConfig {

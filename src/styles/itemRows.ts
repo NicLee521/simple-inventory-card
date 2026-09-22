@@ -57,6 +57,12 @@ export const itemRowStyles: CSSResult = css`
     opacity: 0.7;
   }
 
+  .nutrition-summary {
+    color: var(--secondary-text-color);
+    font-size: 0.85em;
+    font-weight: 500;
+  }
+
   .item-footer {
     display: flex;
     flex-direction: column;
