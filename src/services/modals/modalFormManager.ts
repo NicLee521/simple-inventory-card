@@ -133,12 +133,30 @@ export class ModalFormManager {
           (item.price ?? DEFAULTS.PRICE) === 0 ? '' : (item.price ?? DEFAULTS.PRICE).toString(),
       },
       { id: `edit-${ELEMENTS.UNIT}`, value: item.unit ?? DEFAULTS.UNIT },
-      { id: `edit-${ELEMENTS.SERVING_SIZE}`, value: (item.serving_size ?? DEFAULTS.SERVING_SIZE).toString() },
-      { id: `edit-${ELEMENTS.SERVINGS_PER_UNIT}`, value: (item.servings_per_unit ?? DEFAULTS.SERVINGS_PER_UNIT).toString() },
-      { id: `edit-${ELEMENTS.CALORIES_PER_SERVING}`, value: (item.calories_per_serving ?? DEFAULTS.CALORIES_PER_SERVING).toString() },
-      { id: `edit-${ELEMENTS.PROTEIN_PER_SERVING}`, value: (item.protein_g_per_serving ?? DEFAULTS.PROTEIN_PER_SERVING).toString() },
-      { id: `edit-${ELEMENTS.CARBOHYDRATES_PER_SERVING}`, value: (item.carbs_g_per_serving ?? DEFAULTS.CARBOHYDRATES_PER_SERVING).toString() },
-      { id: `edit-${ELEMENTS.FAT_PER_SERVING}`, value: (item.fat_per_serving ?? DEFAULTS.FAT_PER_SERVING).toString() },
+      {
+        id: `edit-${ELEMENTS.SERVING_SIZE}`,
+        value: (item.serving_size ?? DEFAULTS.SERVING_SIZE).toString(),
+      },
+      {
+        id: `edit-${ELEMENTS.SERVINGS_PER_UNIT}`,
+        value: (item.servings_per_unit ?? DEFAULTS.SERVINGS_PER_UNIT).toString(),
+      },
+      {
+        id: `edit-${ELEMENTS.CALORIES_PER_SERVING}`,
+        value: (item.calories_per_serving ?? DEFAULTS.CALORIES_PER_SERVING).toString(),
+      },
+      {
+        id: `edit-${ELEMENTS.PROTEIN_PER_SERVING}`,
+        value: (item.protein_g_per_serving ?? DEFAULTS.PROTEIN_PER_SERVING).toString(),
+      },
+      {
+        id: `edit-${ELEMENTS.CARBOHYDRATES_PER_SERVING}`,
+        value: (item.carbs_g_per_serving ?? DEFAULTS.CARBOHYDRATES_PER_SERVING).toString(),
+      },
+      {
+        id: `edit-${ELEMENTS.FAT_PER_SERVING}`,
+        value: (item.fat_per_serving ?? DEFAULTS.FAT_PER_SERVING).toString(),
+      },
     ];
 
     this.setFormValues(fields);

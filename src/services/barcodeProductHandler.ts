@@ -109,7 +109,9 @@ export class BarcodeProductHandler {
       'fat-per-serving': ['fat_g_per_serving'],
     };
     for (const [field, keys] of Object.entries(nutritionFields)) {
-      const value = keys.map((key) => product[key]).find((candidate) => candidate !== undefined && candidate !== '');
+      const value = keys
+        .map((key) => product[key])
+        .find((candidate) => candidate !== undefined && candidate !== '');
       this.autoFillIfEmpty(`${prefix}-${field}`, value);
     }
     this.hideProductPicker(prefix);
