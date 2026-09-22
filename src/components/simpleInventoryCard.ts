@@ -94,8 +94,11 @@ class SimpleInventoryCard extends LitElement {
       return;
     }
 
-    if (!this._translations || Object.keys(this._translations).length === 0) {
-      return;
+    // Translation files are optional at runtime (for example while HA is loading a
+    // HACS resource). Templates provide fallbacks, so an unavailable translation
+    // file must not prevent the card from rendering entirely.
+    if (!this._translations) {
+      this._translations = {};
     }
 
     if (!this.lifecycleManager.isReady()) {

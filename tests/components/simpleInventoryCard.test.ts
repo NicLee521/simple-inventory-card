@@ -268,21 +268,24 @@ describe('SimpleInventoryCard', () => {
       expect(Utilities.validateInventoryItems).toHaveBeenCalledWith(testItems);
     });
 
-    it('should not render if translations are not loaded', () => {
-      // Create a fresh card instance without loading translations
+    it('renders with template fallbacks when translations are unavailable', () => {
+      // Create a fresh card instance without loaded translations.
       const freshCard = new SimpleInventoryCard();
       const config = { entity: 'sensor.inventory' } as InventoryConfig;
       freshCard.setConfig(config);
-
-      // Ensure translations are null
+      (freshCard as any)._hass = createMockHomeAssistant();
       (freshCard as any)._translations = null;
+      Object.defineProperty(freshCard, 'renderRoot', {
+        value: freshCard.shadowRoot,
+        writable: true,
+      });
 
-      // Clear any previous calls
+      mockLifecycleManager.isReady.mockReturnValue(true);
       mockRenderingCoordinator.render.mockClear();
-
       freshCard.render();
 
-      expect(mockRenderingCoordinator.render).not.toHaveBeenCalled();
+      expect(mockRenderingCoordinator.render).toHaveBeenCalled();
+      expect((freshCard as any)._translations).toEqual({});
     });
   });
 
