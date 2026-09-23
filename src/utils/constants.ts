@@ -56,7 +56,7 @@ export const PARAMS = {
   CALORIES_PER_SERVING: 'calories_per_serving',
   PROTEIN_PER_SERVING: 'protein_g_per_serving',
   CARBOHYDRATES_PER_SERVING: 'carbs_g_per_serving',
-  FAT_PER_SERVING: 'fat_per_serving',
+  FAT_PER_SERVING: 'fat_g_per_serving',
 };
 
 export const ELEMENTS = {

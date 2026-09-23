@@ -90,6 +90,12 @@ describe('Services', () => {
         [PARAMS.TODO_QUANTITY_PLACEMENT]: DEFAULTS.TODO_QUANTITY_PLACEMENT,
         [PARAMS.UNIT]: itemData.unit,
       });
+      expect(mockHass.callService).toHaveBeenCalledWith(
+        DOMAIN,
+        SERVICES.ADD_ITEM,
+        expect.objectContaining({ fat_g_per_serving: DEFAULTS.FAT_PER_SERVING }),
+      );
+      expect(PARAMS.FAT_PER_SERVING).toBe('fat_g_per_serving');
     });
 
     it('should include aliases in service data when provided', async () => {

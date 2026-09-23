@@ -155,7 +155,7 @@ export class ModalFormManager {
       },
       {
         id: `edit-${ELEMENTS.FAT_PER_SERVING}`,
-        value: (item.fat_per_serving ?? DEFAULTS.FAT_PER_SERVING).toString(),
+        value: (item.fat_g_per_serving ?? DEFAULTS.FAT_PER_SERVING).toString(),
       },
     ];
 
