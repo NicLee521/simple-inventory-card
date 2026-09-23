@@ -2,9 +2,9 @@ import packageJson from '../../package.json';
 
 import { ConfigEditor } from './configEditor';
 import { HomeAssistant, InventoryConfig, InventoryItem } from '@/types/homeAssistant';
+import { LitElement } from 'lit-element';
 import { LifecycleManager } from '../services/lifecycleManager';
 import { Services } from '../services/services';
-import { LitElement } from 'lit-element';
 import { RenderingCoordinator } from '../services/renderingCoordinator';
 import { Utilities } from '../utils/utilities';
 import { InventoryResolver } from '../utils/inventoryResolver';
@@ -28,6 +28,12 @@ class SimpleInventoryCard extends LitElement {
     this.lifecycleManager = new LifecycleManager(this.shadowRoot!);
     this.renderingCoordinator = new RenderingCoordinator(this.lifecycleManager, this.shadowRoot!);
   }
+
+  /**
+   * Keeps Lit from starting its template update cycle; this card renders its
+   * DOM imperatively through RenderingCoordinator instead.
+   */
+  connectedCallback(): void {}
 
   setConfig(config: InventoryConfig): void {
     if (!config.entity) {
@@ -90,7 +96,7 @@ class SimpleInventoryCard extends LitElement {
   }
 
   render(): void {
-    if (!this._config || !this._hass || !this.renderRoot) {
+    if (!this._config || !this._hass || !this.shadowRoot) {
       return;
     }
 

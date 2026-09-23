@@ -49,6 +49,7 @@ describe('SimpleInventoryCard', () => {
 
     mockRenderingCoordinator = {
       render: vi.fn(),
+      renderError: vi.fn(),
       cleanup: vi.fn(),
     };
 

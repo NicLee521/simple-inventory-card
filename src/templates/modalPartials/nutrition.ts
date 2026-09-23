@@ -14,9 +14,9 @@ export function nutrition(prefix: string): string {
       ${field(ELEMENTS.SERVING_SIZE, 'Serving size', '', 'text')}
       ${field(ELEMENTS.SERVINGS_PER_UNIT, 'Servings / unit')}
       ${field(ELEMENTS.CALORIES_PER_SERVING, 'Calories / serving')}
-      ${field(ELEMENTS.PROTEIN_PER_SERVING, 'Protein', 'g')}
-      ${field(ELEMENTS.CARBOHYDRATES_PER_SERVING, 'Carbohydrates', 'g')}
-      ${field(ELEMENTS.FAT_PER_SERVING, 'Fat', 'g')}
+      ${field(ELEMENTS.PROTEIN_PER_SERVING, 'Protein / serving', 'g')}
+      ${field(ELEMENTS.CARBOHYDRATES_PER_SERVING, 'Carbohydrates / serving', 'g')}
+      ${field(ELEMENTS.FAT_PER_SERVING, 'Fat / serving', 'g')}
     </div>
   </details>`;
 }
